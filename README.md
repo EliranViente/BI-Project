@@ -4,7 +4,7 @@ Our goal in this project is to provide quality information and identify meaningf
 For more information about the project objective and our KPIs, see the file titled "Project Objective".
 After analyzing the data warehouse, we determined that a star schema would be the most efficient schema for our needs. This choice was based on the fact that our data has no hierarchical structure and is quite extensive. With the help of this scheme, we can classify and organize the information in a simple and efficient way.
 Structure of the data warehouse:
-![Alt text](<The data warehouse.png>)
+![Alt text](<Assets/Pictures/The_Data Warehouse.png>)
 
 Next, we performed a custom ETL process for each table in the data warehouse. You can find all the processes in the ETL folder in this project.
 
@@ -12,24 +12,24 @@ In addition, we performed an STTM process on a selected part of the original dat
 
 In the end, we loaded all the tables after the ETL process and tried to get business insights from them using SQL and Window Function queries.
 Here are some interesting queries we did:
-![Alt text](<Fact Table.png>)
+![Alt text](<Assets/Pictures/Fact_Table.png>)
 
 Calculation of the duration between each test or hospitalization that each patient had:
-![Alt text](Q1.png)
+![Alt text](Assets/Pictures/Q1.png)
 
 According to the result of the previous query, display the patients who were admitted and had their last routine examination more than 700 days ago.
 Note: The user will most likely use this query to filter exceptions.
-![Alt text](Q2.png)
+![Alt text](Assets/Pictures/Q2.png)
 ## Conclusion:
 This query displays the selected filter value for not referring to a hospitalization line due to the fact that the last test line necessarily resulted in hospitalization. We note that the selection of the value is a np_hard problem that affects the data that will be presented to the client. In addition, in the ETL process, we filtered outliers for 900 days, we presented here for 700 days so that an output is shown to the user. The number of days will be subject to the customer's decision to allow him to choose the number of days he would like to filter.
 
 The number of patients who died by age:
-![Alt text](Q3.png)
+![Alt text](Assets/Pictures/Q3.png)
 ## Conclusion:
 The client will be able to characterize whether more deaths occurred at a certain age than at other ages and thus analyze the data of the test results in a targeted manner.
 
 Average length of hospitalization:
-![Alt text](Q8.png)
+![Alt text](Assets/Pictures/Q8.png)
 ## Conclusion:
 The average length of hospitalization is an important figure by which the customer can estimate the average cost of hospitalization for his insured customers in terms of money. This figure will support the project's goal of reducing the amount of hospitalizations in the future.
 
